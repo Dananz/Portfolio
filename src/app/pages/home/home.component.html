@@ -1,6 +1,7 @@
 <ng-container *ngVar="{ projectView: false } as startLoad">
     <app-wellcome id="wellcome" (goToAbout)="scrollToAbout()"></app-wellcome>
-    <app-about-me #aboutMe id="about" (goToProjects)="scrollToProjects()" (deferLoad)="startLoad.projectView = true"></app-about-me>
+    <app-about-me #aboutMe id="about" (goToProjects)="scrollToProjects()" (deferLoad)="startLoad.projectView = true">
+    </app-about-me>
     <app-projects-list #projects id="projects" *ngIf="startLoad.projectView"></app-projects-list>
-    <app-footer></app-footer>
+    <app-footer #contact id="contact"></app-footer>
 </ng-container>

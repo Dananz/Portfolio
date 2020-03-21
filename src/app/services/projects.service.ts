@@ -37,7 +37,7 @@ export class ProjectsService {
         "Fully Animated using CSS3 keyframes & Angular Animations.",
       ],
       client_techs: ['Angular', 'SCSS', 'Rxjs', 'Angular Material & CDK', 'NGX-Translate'],
-      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS'],
+      server_techs: ['IIS', 'Rest API', '.Net (Entity Framework)'],
       isActive: true
     },
     {
@@ -53,7 +53,7 @@ export class ProjectsService {
         "Designed UI & UX flow."
       ],
       client_techs: ['Angular', 'SCSS', 'Rxjs', 'Angular Material'],
-      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS'],
+      server_techs: ['IIS', 'Rest API', '.Net (Entity Framework)'],
       isActive: true
     },
     {

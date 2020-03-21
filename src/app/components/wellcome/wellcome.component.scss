@@ -26,7 +26,6 @@ h1 {
 }
 
 h3 {
-  font-size: 4.5vw;
   @include slide-in-left(17);
   padding-left: 4vw;
   background: -webkit-linear-gradient(#3ac99c, #288bad);
@@ -45,6 +44,7 @@ h3 {
     border-radius: 50%;
   }
 }
+
 
 @keyframes border-in {
   0% {
@@ -87,6 +87,7 @@ h3 {
 }
 .wellcome {
   align-self: flex-start;
+  margin: auto 0;
 }
 .logo {
   position: relative;

@@ -1,6 +1,6 @@
 import { fadeAnimation } from './route-animations';
-import { Component, OnInit } from '@angular/core';
-declare var Rellax: any;
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -8,15 +8,8 @@ declare var Rellax: any;
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation]
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'Portfolio';
-  ngOnInit(): void {
-    var rellax = new Rellax('.rellax', {
-      wrapper: 'app-home',
-      center: false
-    });
-  }
-
   getState(outlet) {
     return outlet.activatedRouteData.state;
   }

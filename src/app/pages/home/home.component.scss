@@ -9,12 +9,18 @@
 }
 
 app-wellcome,
-app-about-me,
 app-projects-list {
-  scroll-snap-align: start;
-  display: block;
   height: 100vh;
 }
+app-about-me {
+  scroll-snap-align: start;
+  display: block;
+  height: 120vh;
+  @include desktop {
+    height: 100vh;
+  }
+}
+
 app-footer {
   scroll-snap-align: end;
   display: block;

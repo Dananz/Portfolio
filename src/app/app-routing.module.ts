@@ -4,8 +4,7 @@ import { ProjectComponent, ProjectViewComponent, ProjectsListComponent } from '.
 import { HomeComponent } from './pages/home/home.component';
 
 const routerOptions: ExtraOptions = {
-  useHash: false,
-  anchorScrolling: 'enabled',
+  anchorScrolling: 'enabled'
 };
 
 const routes: Routes = [
