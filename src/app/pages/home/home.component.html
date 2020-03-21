@@ -1,0 +1,6 @@
+<ng-container *ngVar="{ projectView: false } as startLoad">
+    <app-wellcome id="wellcome"></app-wellcome>
+    <app-about-me id="about-me" (deferLoad)="startLoad.projectView = true"></app-about-me>
+    <app-projects-list id="project-view" *ngIf="startLoad.projectView"></app-projects-list>
+    <app-footer></app-footer>
+</ng-container>

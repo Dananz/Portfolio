@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "Portfolio": {
@@ -30,7 +30,14 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/rellax/rellax.min.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/app/styles"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -94,7 +101,14 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/rellax/rellax.min.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./src/app/styles"
+              ]
+            }
           }
         },
         "lint": {
@@ -123,6 +137,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "Portfolio"
 }

@@ -1,0 +1,18 @@
+<div class="floating-close" (click)="close()">
+    ✖
+</div>
+<!-- controls -->
+<button class="control next" (click)="next()" *ngIf="!isSingleSlide">
+    <span class="arrow right"></span>
+</button>
+<button class="control prev" (click)="previous()" *ngIf="!isSingleSlide">
+    <span class="arrow left"></span>
+</button>
+<!-- controls -->
+<div class="container">
+    <div class="background">
+        <ng-container *ngFor="let slide of slides;  index as i">
+            <img *ngIf="i === currentSlide" [src]="slide" class="slide" @carouselAnimation>
+        </ng-container>
+    </div>
+</div>

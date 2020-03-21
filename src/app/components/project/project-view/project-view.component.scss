@@ -1,0 +1,198 @@
+@import "common";
+@import "animations";
+
+.section-container {
+  @include gradient(#252525, #404143);
+  position: relative;
+  width: 100vw;
+  height: 200vh;
+  @include desktop {
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+.flex-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  @include desktop {
+    flex-direction: row;
+  }
+  & > div {
+    margin: 0;
+    flex: 1 1;
+    @include desktop {
+      flex: 1 0 50%;
+    }
+  }
+}
+h4 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+.proj-images {
+  scroll-snap-align: start;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-auto-columns: 1fr;
+
+  .img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 1.6s ease-out;
+      display: grid;
+      place-items: center;
+      @include gradient-dark-lite-animate;
+      .text {
+        font-size: 3vw;
+        text-align: center;
+      }
+    }
+    &:hover .overlay {
+      cursor: zoom-in;
+      opacity: 0.9;
+      transition: 0.2s ease-in;
+    }
+  }
+}
+.proj-details {
+  scroll-snap-align: start;
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+}
+.back-button {
+  height: 50px;
+  display: grid;
+  place-items: center;
+  transition: all 0.3s ease-in;
+  &:hover {
+    @include gradient(#288bad, #3ac99c);
+    transition: all 0.3s ease-in;
+  }
+}
+.name-description {
+  width: 100%;
+  padding: 16px;
+}
+.my-parts-list {
+  margin: auto 2vw;
+  background-color: rgba(255, 255, 255, 0.95);
+  flex: 0 0 55%;
+  max-height: 60vh;
+  overflow-y: scroll;
+  color: black;
+  border-radius: 24px;
+  header {
+    padding: 16px;
+    background-color: inherit;
+    position: sticky;
+    top: 0;
+  }
+
+  ul {
+    padding-top: 0;
+    max-height: 50vh;
+    overflow-x: scroll;
+    li {
+      padding: 16px;
+      padding-right: 10%;
+      font-size: 1.1rem;
+      background-color: rgba(0, 0, 0, 0.01);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      align-items: center;
+      & span {
+        @include gradient(#d1413e, #681d36);
+        display: inline-block;
+        border-radius: 50px;
+        width: 10px;
+        height: 10px;
+        margin: 0 6px;
+      }
+      list-style-type: none;
+    }
+  }
+}
+.techs {
+  align-self: flex-end;
+  background-color: rgba(black, 0.15);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 16px;
+}
+.bubble-list {
+  background: transparent;
+  color: white;
+  box-shadow: 0;
+
+  ul {
+    list-style-type: none;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex: 1;
+    position: relative;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+
+    li {
+      flex-grow: 1;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 20px;
+      border-radius: 50px;
+      white-space: nowrap;
+      &.blue {
+        @include gradient(#288bad, #3ac99c);
+      }
+      &.red {
+        @include gradient(#d1413e, #681d36);
+      }
+      display: inline-flex;
+      margin-right: 0.7rem;
+      margin-bottom: 0.7rem;
+      padding: 16px 12px;
+    }
+  }
+}
+
+app-slide-show {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}

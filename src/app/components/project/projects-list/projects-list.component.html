@@ -1,0 +1,10 @@
+<main>
+
+    <div class="project" *ngFor="let project of projects" [routerLink]="['/projects/' + project.id]" style="
+    background-image: url('{{project.image_url[0]}}'); ">
+        <div class=" overlay">
+            <div class="text">{{project.name}}</div>
+        </div>
+    </div>
+
+</main>

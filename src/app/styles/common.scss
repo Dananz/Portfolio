@@ -1,0 +1,32 @@
+@import "tags";
+@import "animations";
+
+$desktop: 840px;
+$borders: 19px;
+
+.section-container {
+  position: relative;
+  height: 100%;
+}
+
+@mixin gradient($from, $to) {
+  background: linear-gradient(53deg, #{$from} 0%, #{$to} 100%);
+}
+@mixin gradient-dark-lite-animate {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(53deg, rgba(0, 0, 0, 1) 0%, rgb(100, 100, 100) 100%);
+  background-size: 400% 400%;
+  animation: animate-gradient 1000ms forwards;
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin landscape {
+  @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    @content;
+  }
+}

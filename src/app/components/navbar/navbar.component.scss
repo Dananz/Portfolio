@@ -1,0 +1,27 @@
+nav {
+  background: rgba(black, 0.06);
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+
+
+  button {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: inherit;
+    letter-spacing: 1px;
+  }
+
+  *:not(:disabled):hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  &:hover {
+    background: rgba(black, 0.96);
+  }
+}

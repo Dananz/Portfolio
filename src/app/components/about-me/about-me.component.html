@@ -1,0 +1,170 @@
+<ng-container *ngVar="{ title: false, img: false, view: false } as isVisible">
+    <div class="section-container" (deferLoad)="isVisible.view = true">
+
+        <div class="flex-container">
+            <div class="img-container" (deferLoad)="isVisible.view = true">
+                <img src="assets/imgs/code.jpg" alt="code image" *ngIf="isVisible.view" [@slideFromLeft]>
+            </div>
+            <div class="p-container" (deferLoad)="isVisible.view = true">
+                <section *ngIf="isVisible.view">
+                    <h2 [@fade]>Im Tomer</h2>
+                    <h5 [@fade]>Full Stack Web developer</h5>
+                    <section class="card" [@slideFromRight]>
+                        <h5>Get to know me better</h5>
+                        <hr>
+                        <p>
+                            Independent and high motivated self-learner, perfectionist for clean and organized
+                            projects.
+                            Thinking out of the box & solving difficult problems in creative ways.
+                            Most of all - Knows how to multi-task while working under projects pressure.
+                        </p>
+                    </section>
+                    <section class=" card bubble-list" [@slideFromRight2]>
+                        <h5>What technologies I use?</h5>
+                        <hr>
+                        <ul>
+                            <li><span></span>Angular</li>
+                            <li><span></span>.Net</li>
+                            <li><span></span>React</li>
+                            <li><span></span>SCSS</li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+        </div>
+        <h5>See My Works</h5>
+
+        <div class="pos-ab">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 608 288">
+                <circle class="cls-1" cx="4" cy="4" r="4" />
+                <circle class="cls-1" cx="44" cy="4" r="4" />
+                <circle class="cls-1" cx="84" cy="4" r="4" />
+                <circle class="cls-1" cx="124" cy="4" r="4" />
+                <circle class="cls-1" cx="164" cy="4" r="4" />
+                <circle class="cls-1" cx="204" cy="4" r="4" />
+                <circle class="cls-1" cx="244" cy="4" r="4" />
+                <circle class="cls-1" cx="284" cy="4" r="4" />
+                <circle class="cls-1" cx="324" cy="4" r="4" />
+                <circle class="cls-1" cx="364" cy="4" r="4" />
+                <circle class="cls-1" cx="404" cy="4" r="4" />
+                <circle class="cls-1" cx="444" cy="4" r="4" />
+                <circle class="cls-1" cx="484" cy="4" r="4" />
+                <circle class="cls-1" cx="524" cy="4" r="4" />
+                <circle class="cls-1" cx="564" cy="4" r="4" />
+                <circle class="cls-1" cx="604" cy="4" r="4" />
+                <circle class="cls-1" cx="4" cy="44" r="4" />
+                <circle class="cls-1" cx="44" cy="44" r="4" />
+                <circle class="cls-1" cx="84" cy="44" r="4" />
+                <circle class="cls-1" cx="124" cy="44" r="4" />
+                <circle class="cls-1" cx="164" cy="44" r="4" />
+                <circle class="cls-1" cx="204" cy="44" r="4" />
+                <circle class="cls-1" cx="244" cy="44" r="4" />
+                <circle class="cls-1" cx="284" cy="44" r="4" />
+                <circle class="cls-1" cx="324" cy="44" r="4" />
+                <circle class="cls-1" cx="364" cy="44" r="4" />
+                <circle class="cls-1" cx="404" cy="44" r="4" />
+                <circle class="cls-1" cx="444" cy="44" r="4" />
+                <circle class="cls-1" cx="484" cy="44" r="4" />
+                <circle class="cls-1" cx="524" cy="44" r="4" />
+                <circle class="cls-1" cx="564" cy="44" r="4" />
+                <circle class="cls-1" cx="604" cy="44" r="4" />
+                <circle class="cls-1" cx="4" cy="84" r="4" />
+                <circle class="cls-1" cx="44" cy="84" r="4" />
+                <circle class="cls-1" cx="84" cy="84" r="4" />
+                <circle class="cls-1" cx="124" cy="84" r="4" />
+                <circle class="cls-1" cx="164" cy="84" r="4" />
+                <circle class="cls-1" cx="204" cy="84" r="4" />
+                <circle class="cls-1" cx="244" cy="84" r="4" />
+                <circle class="cls-1" cx="284" cy="84" r="4" />
+                <circle class="cls-1" cx="324" cy="84" r="4" />
+                <circle class="cls-1" cx="364" cy="84" r="4" />
+                <circle class="cls-1" cx="404" cy="84" r="4" />
+                <circle class="cls-1" cx="444" cy="84" r="4" />
+                <circle class="cls-1" cx="484" cy="84" r="4" />
+                <circle class="cls-1" cx="524" cy="84" r="4" />
+                <circle class="cls-1" cx="564" cy="84" r="4" />
+                <circle class="cls-1" cx="604" cy="84" r="4" />
+                <circle class="cls-1" cx="4" cy="124" r="4" />
+                <circle class="cls-1" cx="44" cy="124" r="4" />
+                <circle class="cls-1" cx="84" cy="124" r="4" />
+                <circle class="cls-1" cx="124" cy="124" r="4" />
+                <circle class="cls-1" cx="164" cy="124" r="4" />
+                <circle class="cls-1" cx="204" cy="124" r="4" />
+                <circle class="cls-1" cx="244" cy="124" r="4" />
+                <circle class="cls-1" cx="284" cy="124" r="4" />
+                <circle class="cls-1" cx="324" cy="124" r="4" />
+                <circle class="cls-1" cx="364" cy="124" r="4" />
+                <circle class="cls-1" cx="404" cy="124" r="4" />
+                <circle class="cls-1" cx="444" cy="124" r="4" />
+                <circle class="cls-1" cx="484" cy="124" r="4" />
+                <circle class="cls-1" cx="524" cy="124" r="4" />
+                <circle class="cls-1" cx="564" cy="124" r="4" />
+                <circle class="cls-1" cx="604" cy="124" r="4" />
+                <circle class="cls-1" cx="4" cy="164" r="4" />
+                <circle class="cls-1" cx="44" cy="164" r="4" />
+                <circle class="cls-1" cx="84" cy="164" r="4" />
+                <circle class="cls-1" cx="124" cy="164" r="4" />
+                <circle class="cls-1" cx="164" cy="164" r="4" />
+                <circle class="cls-1" cx="204" cy="164" r="4" />
+                <circle class="cls-1" cx="244" cy="164" r="4" />
+                <circle class="cls-1" cx="284" cy="164" r="4" />
+                <circle class="cls-1" cx="324" cy="164" r="4" />
+                <circle class="cls-1" cx="364" cy="164" r="4" />
+                <circle class="cls-1" cx="404" cy="164" r="4" />
+                <circle class="cls-1" cx="444" cy="164" r="4" />
+                <circle class="cls-1" cx="484" cy="164" r="4" />
+                <circle class="cls-1" cx="524" cy="164" r="4" />
+                <circle class="cls-1" cx="564" cy="164" r="4" />
+                <circle class="cls-1" cx="604" cy="164" r="4" />
+                <circle class="cls-1" cx="4" cy="204" r="4" />
+                <circle class="cls-1" cx="44" cy="204" r="4" />
+                <circle class="cls-1" cx="84" cy="204" r="4" />
+                <circle class="cls-1" cx="124" cy="204" r="4" />
+                <circle class="cls-1" cx="164" cy="204" r="4" />
+                <circle class="cls-1" cx="204" cy="204" r="4" />
+                <circle class="cls-1" cx="244" cy="204" r="4" />
+                <circle class="cls-1" cx="284" cy="204" r="4" />
+                <circle class="cls-1" cx="324" cy="204" r="4" />
+                <circle class="cls-1" cx="364" cy="204" r="4" />
+                <circle class="cls-1" cx="404" cy="204" r="4" />
+                <circle class="cls-1" cx="444" cy="204" r="4" />
+                <circle class="cls-1" cx="484" cy="204" r="4" />
+                <circle class="cls-1" cx="524" cy="204" r="4" />
+                <circle class="cls-1" cx="564" cy="204" r="4" />
+                <circle class="cls-1" cx="604" cy="204" r="4" />
+                <circle class="cls-1" cx="4" cy="247" r="4" />
+                <circle class="cls-1" cx="44" cy="247" r="4" />
+                <circle class="cls-1" cx="84" cy="247" r="4" />
+                <circle class="cls-1" cx="124" cy="247" r="4" />
+                <circle class="cls-1" cx="164" cy="247" r="4" />
+                <circle class="cls-1" cx="204" cy="247" r="4" />
+                <circle class="cls-1" cx="244" cy="247" r="4" />
+                <circle class="cls-1" cx="284" cy="247" r="4" />
+                <circle class="cls-1" cx="324" cy="247" r="4" />
+                <circle class="cls-1" cx="364" cy="247" r="4" />
+                <circle class="cls-1" cx="404" cy="247" r="4" />
+                <circle class="cls-1" cx="444" cy="247" r="4" />
+                <circle class="cls-1" cx="484" cy="247" r="4" />
+                <circle class="cls-1" cx="524" cy="247" r="4" />
+                <circle class="cls-1" cx="564" cy="247" r="4" />
+                <circle class="cls-1" cx="604" cy="247" r="4" />
+                <circle class="cls-1" cx="4" cy="284" r="4" />
+                <circle class="cls-1" cx="44" cy="284" r="4" />
+                <circle class="cls-1" cx="84" cy="284" r="4" />
+                <circle class="cls-1" cx="124" cy="284" r="4" />
+                <circle class="cls-1" cx="164" cy="284" r="4" />
+                <circle class="cls-1" cx="204" cy="284" r="4" />
+                <circle class="cls-1" cx="244" cy="284" r="4" />
+                <circle class="cls-1" cx="284" cy="284" r="4" />
+                <circle class="cls-1" cx="324" cy="284" r="4" />
+                <circle class="cls-1" cx="364" cy="284" r="4" />
+                <circle class="cls-1" cx="404" cy="284" r="4" />
+                <circle class="cls-1" cx="444" cy="284" r="4" />
+                <circle class="cls-1" cx="484" cy="284" r="4" />
+                <circle class="cls-1" cx="524" cy="284" r="4" />
+                <circle class="cls-1" cx="564" cy="284" r="4" />
+                <circle class="cls-1" cx="604" cy="284" r="4" />
+            </svg>
+        </div>
+    </div>
+</ng-container>

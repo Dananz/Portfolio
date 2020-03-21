@@ -1,0 +1,21 @@
+@import "common";
+
+.section-container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+app-wellcome,
+app-about-me,
+app-projects-list {
+  scroll-snap-align: start;
+  display: block;
+  height: 100vh;
+}
+app-footer {
+  scroll-snap-align: end;
+  display: block;
+}
