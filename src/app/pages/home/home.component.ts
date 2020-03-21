@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
 
-  constructor() { }
+  @ViewChild("aboutMe", { read: ElementRef }) elAboutMe: ElementRef;
+  @ViewChild("projects", { read: ElementRef }) elProject: ElementRef;
 
-  ngOnInit(): void {
+  scrollToAbout() {
+    this.elAboutMe.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+  scrollToProjects() {
+    this.elProject.nativeElement.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
 }

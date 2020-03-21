@@ -3,7 +3,6 @@
         <div class="flex-container">
             <div class="proj-details">
                 <div class="back-button">
-                    <!-- <span>go back</span> -->
                 </div>
                 <div class="name-description">
                     <h3>{{project.name}}</h3>
@@ -24,14 +23,14 @@
                     <h4>Which Technologies I've Used?</h4>
                     <hr>
                     <div class="bubble-list">
-                        <ul>
+                        <ul *ngIf="project.client_techs !== []">
                             <li class="blue" *ngFor="let tech of project.client_techs">
                                 {{tech}}
                             </li>
                         </ul>
                     </div>
                     <div class="bubble-list">
-                        <ul>
+                        <ul *ngIf="project.server_techs !== []">
                             <li class="red" *ngFor="let tech of project.server_techs">
                                 {{tech}}
                             </li>
@@ -41,14 +40,12 @@
             </div>
             <div class="proj-images">
                 <ng-container *ngFor="let url of project.image_url">
-                    <!-- <img [src]="url" [alt]="project.name"> -->
                     <div class="img" style="background-image: url({{url}});" (click)="selectImage(url)">
                         <div class="overlay">🔎</div>
                     </div>
                 </ng-container>
             </div>
         </div>
-
         <app-slide-show [@fade] *ngIf="slideshowVisible" [slides]="project.image_url"
             (setOff)="slideshowVisible = false"></app-slide-show>
     </ng-container>

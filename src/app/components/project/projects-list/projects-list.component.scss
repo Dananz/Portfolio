@@ -30,6 +30,9 @@ main {
       display: grid;
       place-items: center;
       background-color: black;
+      .text {
+        text-align: center;
+      }
     }
     .overlay:not([data-disabled="true"]) {
       position: absolute;
@@ -54,4 +57,10 @@ main {
       opacity: 0.9;
     }
   }
+}
+
+small {
+  display: block;
+  opacity: .6;
+
 }

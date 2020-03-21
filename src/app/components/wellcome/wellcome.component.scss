@@ -150,3 +150,15 @@ h3 {
     transform: translateX(0);
   }
 }
+
+
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  opacity: .9;
+}

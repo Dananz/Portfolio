@@ -1,10 +1,13 @@
 <main>
-
-    <div class="project" *ngFor="let project of projects" [routerLink]="['/projects/' + project.id]" style="
-    background-image: url('{{project.image_url[0]}}'); ">
-        <div class=" overlay">
-            <div class="text">{{project.name}}</div>
+    <div *ngFor="let project of projects" [routerLink]="project.isActive ? ['/projects/' + project.id] : null"
+        class="project" style="background-image: url('{{project.image_url[0]}}')">
+        <div class="overlay" [attr.data-disabled]="!project.isActive">
+            <div class="text">
+                {{project.name}}
+                <ng-container *ngIf="!project.isActive">
+                    <small>soon will be available</small>
+                </ng-container>
+            </div>
         </div>
     </div>
-
 </main>

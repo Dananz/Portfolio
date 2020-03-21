@@ -1,8 +1,12 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { ProjectComponent, ProjectViewComponent, ProjectsListComponent } from './components/project';
 import { HomeComponent } from './pages/home/home.component';
 
+const routerOptions: ExtraOptions = {
+  useHash: false,
+  anchorScrolling: 'enabled',
+};
 
 const routes: Routes = [
   { path: '', component: HomeComponent, data: { animation: 'Home' } },
@@ -15,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, routerOptions)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

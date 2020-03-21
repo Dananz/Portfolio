@@ -2,7 +2,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
 import { Observable, of, Subscription } from 'rxjs';
 import { IProject } from './../../../models/IProject';
 import { ProjectsService } from './../../../services/projects.service';
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { isNullOrUndefined } from 'util';
 
@@ -10,15 +10,16 @@ import { isNullOrUndefined } from 'util';
   selector: 'app-project-view',
   templateUrl: './project-view.component.html',
   styleUrls: ['./project-view.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('fade', [
-      transition('void => *', [
+      transition(':enter', [
         style({ transform: 'translateX(3000px)' }),
         animate('400ms ease-in', style({ opacity: 1, transform: 'translateX(0)' }))
       ]),
-      transition('* => void', [
+      transition(':leave', [
         style({ opacity: 1, transform: 'translateX(0)' }),
-        animate('500ms ease-out', style({ transform: 'translateX(3000px)' }))
+        animate('500ms ease-out', style({ opacity: 0, transform: 'translateX(3000px)' }))
       ]),
     ])]
 })

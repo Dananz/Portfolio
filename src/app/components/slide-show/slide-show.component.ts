@@ -1,10 +1,11 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-slide-show',
   templateUrl: './slide-show.component.html',
   styleUrls: ['./slide-show.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [
     trigger('carouselAnimation', [
       transition('void => *', [
@@ -13,6 +14,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
           style({ opacity: 1, transform: "scale(1)", 'transform-origin': " center" }))
       ]),
       transition('* => void', [
+        style({ opacity: 1, transform: "scale(1)", 'transform-origin': " center" }),
         animate('400ms cubic-bezier(0.785, 0.135, 0.15, 0.86)',
           style({ opacity: 0, transform: "scale(0.5) ", 'transform-origin': " center" }))
       ])
@@ -20,12 +22,12 @@ import { trigger, transition, style, animate } from '@angular/animations';
   ]
 })
 export class SlideShowComponent implements OnInit {
-
   @Input() slides = []
   @Input() currentSlide = 0;
   @Output() setOff = new EventEmitter
+
   public isSingleSlide = false
-  constructor() { }
+
 
   ngOnInit(): void {
     this.isSingleSlide = this.slides.length <= 1 ? true : false

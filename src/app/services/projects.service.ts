@@ -12,10 +12,11 @@ export class ProjectsService {
       id: 'getshred',
       description: '',
       name: 'GetShred',
-      image_url: ['', ''],
-      my_parts: [''],
-      client_techs: [''],
-      server_techs: ['']
+      image_url: [],
+      my_parts: [],
+      client_techs: [],
+      server_techs: [],
+      isActive: false
     },
     {
       id: 'seatmap-backoffice',
@@ -36,7 +37,8 @@ export class ProjectsService {
         "Fully Animated using CSS3 keyframes & Angular Animations.",
       ],
       client_techs: ['Angular', 'SCSS', 'Rxjs', 'Angular Material & CDK', 'NGX-Translate'],
-      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS']
+      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS'],
+      isActive: true
     },
     {
       id: 'backoffice',
@@ -51,7 +53,8 @@ export class ProjectsService {
         "Designed UI & UX flow."
       ],
       client_techs: ['Angular', 'SCSS', 'Rxjs', 'Angular Material'],
-      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS']
+      server_techs: ['.Net (Entity Framework)', 'Rest API', 'IIS'],
+      isActive: true
     },
     {
       id: 'we-do-stuff',
@@ -64,7 +67,8 @@ export class ProjectsService {
         "Fully Animated using CSS3 keyframes."
       ],
       client_techs: ['SCSS', 'JS', 'HTML'],
-      server_techs: [null]
+      server_techs: [],
+      isActive: true
     },
   ]
 

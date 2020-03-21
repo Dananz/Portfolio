@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -32,13 +32,11 @@ import { trigger, transition, style, animate } from '@angular/animations';
     ]),
   ]
 })
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent {
+  @Output() goToProjects = new EventEmitter();
 
-  constructor() { }
-  myelement = false
-  ngOnInit(): void {
-  }
-  log(c) {
-    console.log(c)
+  slideToProjects(ev) {
+    ev.preventDefault();
+    this.goToProjects.emit()
   }
 }
