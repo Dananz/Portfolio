@@ -5,6 +5,7 @@ main {
   height: 100%;
   scroll-snap-type: y proximity;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 app-project {
   width: 100vw;

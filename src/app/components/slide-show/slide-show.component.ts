@@ -28,7 +28,6 @@ export class SlideShowComponent implements OnInit {
 
   public isSingleSlide = false
 
-
   ngOnInit(): void {
     this.isSingleSlide = this.slides.length <= 1 ? true : false
   }

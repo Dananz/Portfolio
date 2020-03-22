@@ -15,7 +15,7 @@ app-projects-list {
 app-about-me {
   scroll-snap-align: start;
   display: block;
-  height: 120vh;
+  height: 130vh;
   @include desktop {
     height: 100vh;
   }
